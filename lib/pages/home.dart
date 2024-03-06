@@ -45,6 +45,7 @@ class _HomeState extends State<Home> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+
       appBar: AppBar(
         backgroundColor: Colors.blue,
         centerTitle: true,
@@ -136,19 +137,19 @@ class _HomeState extends State<Home> {
                   ),
                 ),
                 actions: [
-                TextButton.icon(
+                  IconButton(
                   icon: Icon(Icons.cancel),
-                  label: const Text("ОТМЕНА"),
+                  //label: const Text("ОТМЕНА"),
                   style: ButtonStyle(
                     backgroundColor: MaterialStateProperty.all<Color>(Colors.red),
                     foregroundColor: MaterialStateProperty.all<Color>(Colors.white),
                   ),
                   onPressed: () => Navigator.of(context).pop()
                 ),
-                  
-                  TextButton.icon(
+
+                  IconButton(
                     icon: Icon(Icons.person_add),
-                    label: const Text('ДОБАВИТЬ'),
+                    //label: const Text('ДОБАВИТЬ'),
                     style: ButtonStyle(
                       backgroundColor: MaterialStateProperty.all<Color>(Colors.blue),
                       foregroundColor: MaterialStateProperty.all<Color>(Colors.white),
@@ -171,7 +172,8 @@ class _HomeState extends State<Home> {
                           focusedBorder: OutlineInputBorder(
                               borderSide: BorderSide(color: Colors.blue)
                           ),
-                          labelText: 'Имя'
+                          //labelText: 'Имя',
+                          hintText: 'Имя',
                       ),
                       onChanged: (String value) {
                         contactName = value;
@@ -185,8 +187,8 @@ class _HomeState extends State<Home> {
                           focusedBorder: OutlineInputBorder(
                             borderSide: BorderSide(color: Colors.blue)
                           ),
-
-                          labelText: 'Фамилия'
+                          //labelText: 'Фамилия',
+                          hintText: 'Фамилия',
                       ),
                       onChanged: (String value) {
                         contactSurname = value;
@@ -198,10 +200,12 @@ class _HomeState extends State<Home> {
                       decoration: InputDecoration(
                           prefixIcon: Icon(Icons.call),
                           border: OutlineInputBorder(),
+                          //labelText: 'Телефон',
+                          hintText: 'Телефон',
                           focusedBorder: OutlineInputBorder(
                               borderSide: BorderSide(color: Colors.blue)
                           ),
-                          labelText: 'Телефон',
+
 
                       ),
                       onChanged: (String value) {
